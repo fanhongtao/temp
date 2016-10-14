@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="gb2312"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="pinyin">
+	<xs:element name="extra">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="title" minOccurs="0" maxOccurs="1"/>
+				<xs:element maxOccurs="unbounded" name="phrase">
+					<xs:complexType>
+						<xs:attribute name="hz" type="xs:string" use="required" />
+						<xs:attribute name="py" type="xs:string" use="required" />
+						<xs:attribute name="info" type="xs:string" use="optional" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
